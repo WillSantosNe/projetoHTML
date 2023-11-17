@@ -1,0 +1,106 @@
+.container-form {
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    z-index: 1;
+    margin: 0 auto;
+    overflow-y: auto;
+    border-radius: 3%;
+}
+
+.container-form h2 {
+    color: #3D437A;
+    font-size: 30px;
+    text-align: center;
+}
+
+.container-form p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container-form input {
+    flex: 1; 
+    height: 40px;
+    margin-top: 10px;
+    background: white;
+    color: #333;
+    font-size: 15px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container-form input[name=nome],
+.container-form input[name=email] {
+    flex-basis: 100%;
+}
+
+.container-form input[name=senha],
+.container-form input[name=confirma-senha] {
+    flex-basis: calc(50% - 5px);
+}
+
+.container-form input[name=senha] {
+    margin-right: 5px;
+}
+
+.container-form input[name=confirma-senha] {
+    margin-left: 5px;
+}
+
+.btn {
+    margin-top: 20px;
+    background-color: #00C59E;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    .container-form {
+        flex-grow: 1;
+        padding: 10px;
+        top: 0;
+        overflow-y: auto;   
+    }
+
+    .container-form form input[name=senha], 
+    .container-form form input[name=confirma-senha] {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-form form a {
+        width: 100%;
+    }
+}

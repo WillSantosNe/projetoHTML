@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+    <link rel="stylesheet" href="relatorio.css">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header>
+        <div class="center">
+            <div class="logo left">Logomarca</div>
+            <nav class="desktop right">
+                <ul class="paginas">
+                    <li><a id="logout">DESLOGAR</a></li>
+                    <li><a href="relatorio.html">RELATÓRIO</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </div> 
+    </header>
+
+    <main>
+        <section class="banner-principal">
+            <div class="overlay"></div>
+            <div class="container-tabela">
+                <h2>Relatório</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NOME</th>
+                            <th>ENDEREÇO</th>
+                            <th>TELEFONE</th>
+                            <th>CIDADE</th>
+                            <th>PAÍS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-corpo">
+                        <!-- O JS irá preencher a tabela aqui usando estrutura de repetição -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Modal que irá aparecer caso o Usuário não esteja logado -->
+    <div id="modalAviso" class="modal">
+        <p>Você precisa estar logado para acessar essa seção.</p>
+        <a href="login.html" class="btn">Login</a> 
+    </div>
+    
+    <script src="verifica_logado.js"></script>
+    <script src="preencheTabela.js"></script>
+    <script src="seleciona_registro.js"></script>
+</body>
+</html>
