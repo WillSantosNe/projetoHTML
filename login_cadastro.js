@@ -29,7 +29,7 @@ function cadastrar(){
     localStorage.setItem('dados', JSON.stringify(dados));
 
     alert("Conta criada com sucesso!");
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 
 
