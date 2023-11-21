@@ -50,17 +50,13 @@ function login(){
 
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
-    console.log('Email:', email);
-    console.log('Senha:', senha);
 
     var dados = JSON.parse(localStorage.getItem('dados')) || [];
-    console.log('Dados de usuário carregados:', dados);
 
     const usuario = dados.find(us => us.email === email);
 
     if(usuario && usuario.senha === senha){
         alert("Login realizado com sucesso!");
-        console.log('Redirecionando para relatorio.html');
 
         localStorage.setItem('usuarioLogado', JSON.stringify({ email: usuario.email, nome: usuario.nome }));
 
