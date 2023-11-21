@@ -1,4 +1,9 @@
 function verificarLogin() {
+    /*
+    Esta função verifica se um usuário está logado com base na presença de um objeto usuarioLogado no armazenamento local (localStorage). 
+    Se o usuário não estiver logado, ela exibe um modal de aviso e aplica um desfoque (efeito de "blur") no conteúdo principal da página para destacar o modal. 
+    Se o usuário estiver logado, o modal é oculto e o desfoque é removido.
+    */
     var usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
     var modal = document.getElementById('modalAviso');
     var mainContent = document.querySelector('main');

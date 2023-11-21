@@ -1,3 +1,43 @@
+<!-- 
+DOCUMENTAÇÃO DO PROJETO (EXPLICAÇÃO PASSO A PASSO)
+
+
+
+    CRIACAO DE ARQUIVOS .HTML
+        index.html
+            Arquivo principal, onde será mostrada a tela de login para o usuário.
+            Ao enviar o formulário, irá chamar a funcao login() do arquivo login_cadastro.js.
+
+        cadastro.html
+            Arquivo que contém formulário para cadastro de usuário.
+            Ao enviar o formulário, irá chamar a função cadastrar() do arquivo login_cadastro.js.
+
+        relatorio.html
+            Arquivo que contém relatório criado dinamicamente utilizando JavaScript.
+            Chama função verificarLogin() do arquivo verifica_logado.js para ver se o usuário está logado.
+            Chama arquivo preencheTabela.js para enriquecer dinamicamente o relatório.
+            Chama arquivo seleciona_registro.js para selecionar registro e deixar ele com fundo diferente.
+
+
+
+    CRIAÇÃO DE ARQUIVOS .JS (Funções documentadas nos respectivos arquivos)
+        login_cadastro.js
+            Arquivo que possui função para cadastrar e/ou logar o usuário.
+            Grava registros no localStorage.
+
+        verifica_logado.js
+            Possui função para verificar se o usuário está logado pelo localStorage.
+            Usado para mostrar modal caso o usuário não logado tente acessar o relatório.
+
+        preencheTabela.js
+            Cria relatório usando os registros pré-montados utilizando laço de repetição.
+            Usado para puxar valores de um banco de dados e mostrar como relatório (array pré-montado é uma simulação do banco de dados)
+
+        seleciona_registro.js
+            Muda a estilização do registro selecionado (click).
+            Usa laço de repetição para remover estilização de todos os elementos.
+ -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

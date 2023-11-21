@@ -1,5 +1,11 @@
-// cadastrar
+// Função para cadastrar um novo usuário
 function cadastrar(){
+    /*
+    Esta função coleta os valores inseridos nos campos de entrada (nome, email, senha e confirma_senha) de um formulário de cadastro.
+    Em seguida, verifica se as senhas digitadas coincidem e se já existe uma conta com o email fornecido. 
+    Se as verificações forem bem-sucedidas, cria um novo objeto de usuário, o adiciona aos dados existentes e armazena os dados localmente.
+    Por fim, exibe uma mensagem de sucesso e redireciona o usuário para 'index.html'.
+    */
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
@@ -19,15 +25,20 @@ function cadastrar(){
         return;
     }
 
+    // Cria um objeto de novo usuário com os valores dos campos
     const novoUsuario = {
         nome: nome,
         email: email,
         senha: senha
     };
 
+    // Adiciona o novo usuário ao array de dados
     dados.push(novoUsuario);
+
+    // Armazena os dados atualizados localmente
     localStorage.setItem('dados', JSON.stringify(dados));
 
+    // Exibe uma mensagem de sucesso e redireciona para 'index.html'
     alert("Conta criada com sucesso!");
     window.location.href = 'index.html';
 }

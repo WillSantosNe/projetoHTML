@@ -1,3 +1,6 @@
+// Quando uma linha é clicada, a função remove a classe highlighted de todas as linhas (garantindo que apenas uma linha esteja destacada por vez)
+// Adiciona a classe highlighted à linha clicada. Isso cria um efeito visual que destaca a linha selecionada.
+
 document.addEventListener('DOMContentLoaded', function() {
     const linhasTabela = document.querySelectorAll('.container-tabela table tbody tr');
 
